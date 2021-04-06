@@ -13,7 +13,7 @@ COPY ./install-entrypoint.sh /usr/local/bin/
 RUN ["chmod", "+x", "/usr/local/bin/docker-entrypoint.sh"]
 RUN ["chmod", "+x", "/usr/local/bin/install-entrypoint.sh"]
 
-WORKDIR /
+WORKDIR /var/www/html/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["php-fpm", "install-entrypoint.sh"]
