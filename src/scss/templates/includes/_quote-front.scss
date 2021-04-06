@@ -1,0 +1,25 @@
+.wp-block-custom-quote {
+  padding: 100px 0;
+  background-color: darken($color-white, 5%);
+  text-align: center;
+}
+
+.quote__text {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 32px;
+  color: $color-primary;
+}
+
+.quote__author, .quote__company {
+  margin: 0;
+  font-size: 16px;
+  color: darkgrey;
+  font-weight: 400;
+}
+
+.quote__logo {
+  width: 60px;
+  border-radius: 50%;
+  margin: 15px auto;
+}

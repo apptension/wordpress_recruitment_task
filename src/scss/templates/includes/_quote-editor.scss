@@ -1,0 +1,21 @@
+.edit-post-visual-editor {
+  .wp-block-custom-quote {
+    @include default-editor-block;
+  }
+
+  .quote__logo-wrapper {
+    position: relative;
+  }
+
+  .quote__remove-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: $color-red;
+    padding: 4px;
+    color: $color-white;
+    height: auto;
+    border-radius: 50%;
+    transform: translate(10px, 10px);
+  }
+}

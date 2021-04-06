@@ -1,0 +1,39 @@
+
+@mixin section($flex: true) {
+  margin-left: auto;
+  margin-right: auto;
+  width: $layout-width;
+  @if $flex == true {
+    display: flex;
+    justify-content: center;
+
+    @include mq($until: desktop){
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+
+  @include mq($until: desktop){
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include mq($until: tablet){
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@mixin desktop-only {
+  @include mq($until: desktop){
+    display: none;
+  }
+}
+
+@mixin mobile-only {
+  @include mq($from: desktop){
+    display: none;
+  }
+}

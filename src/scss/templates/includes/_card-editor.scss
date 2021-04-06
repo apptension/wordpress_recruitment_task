@@ -1,0 +1,27 @@
+.edit-post-visual-editor {
+  .wp-block-custom-card-section {
+    @include default-editor-block;
+
+    .block-editor-block-list__layout {
+      display: flex;
+      flex-wrap: wrap;
+
+      .wp-block {
+        width: 33.33%;
+      }
+    }
+
+    .block-list-appender,
+    .block-editor-inner-blocks,
+    .wp-block-custom-card {
+      width: 100%;
+    }
+
+    .card__item {
+      margin: 10px;
+      padding: 10px;
+      background-color: $color-white;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.idea
+local.env
+wordpress/*
+# Cruft
+.DS_Store
+npm-debug.log
+src/node_modules
+app/themes/apptension-theme/assets
+app/uploads
+app/plugins

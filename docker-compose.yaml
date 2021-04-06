@@ -1,0 +1,44 @@
+version: '3.4'
+
+services:
+  nginx:
+    build: nginx
+    ports:
+      - "8080:80"
+    env_file:
+      - local.env
+    restart: always
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./app:/var/www/app
+      - /var/www/app/themes/apptension-theme/vendor
+    depends_on:
+      - wordpress
+    command: '/bin/sh -c "/bin/run_nginx.sh"'
+
+  wordpress:
+    build: .
+    image: wp-boilerplate-wordpress
+    restart: always
+    env_file:
+      - local.env
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./app:/var/www/app
+      - /var/www/app/themes/apptension-theme/vendor
+    ports:
+      - "9000:9000"
+
+  db:
+    image: mysql:5.7
+    restart: always
+    env_file:
+      - local.env
+    volumes:
+      - wp-boilerplate-db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  wp-boilerplate-db:
+    external: true

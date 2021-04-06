@@ -1,0 +1,14 @@
+{
+  "title": {
+    "type": "string",
+    "default": "Ready to get started?"
+  },
+  "buttonText": {
+    "type": "string",
+    "default": "Contact Sales"
+  },
+  "buttonUrl": {
+    "type": "string",
+    "default": "/contact/"
+  }
+}

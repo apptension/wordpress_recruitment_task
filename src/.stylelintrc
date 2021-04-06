@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "stylelint-config-recommended"
+  ],
+  "rules": {
+    "no-extra-semicolons": null
+  }
+}

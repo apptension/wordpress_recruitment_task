@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  border: none;
+  text-decoration: none;
+  transition: background-color .35s ease;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button--primary {
+  background-color: $color-primary;
+  color: $color-white;
+
+  &:hover {
+    background-color: transparentize($color-primary, .2);
+    color: $color-white;
+  }
+}

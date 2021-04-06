@@ -1,0 +1,123 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.18;
+  margin-bottom: 20px;
+  color: $color-primary;
+
+  @include mq($until: tablet) {
+    font-size: 28px;
+    line-height: 1.29;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.22;
+  margin-bottom: 16px;
+  color: $color-primary;
+
+  @include mq($until: tablet) {
+    font-size: 28px;
+    line-height: 1.29;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  color: $color-primary;
+
+  @include mq($from: tablet) {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  @include mq($from: desktop) {
+    font-size: 28px;
+    line-height: 1.29;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 14px;
+  color: $color-primary;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $color-primary;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $color-primary;
+  margin: 8px 0;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+ul, ol {
+  margin-bottom: 8px;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-align--left {
+  text-align: left;
+}
+
+.text-align--center {
+  text-align: center;
+}
+
+.text-align--right {
+  text-align: right;
+}
+
+input {
+  font-family: $font-family;
+}
+
+.site-content {
+  margin-top: $site-header-height-desktop;
+}

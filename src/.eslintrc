@@ -1,0 +1,170 @@
+{
+  "plugins": [
+    "import",
+    "babel"
+  ],
+  "extends": [
+    "plugin:prettier/recommended",
+    "@apptension/eslint-config",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/core-modules": [
+      "local-env-config",
+      "env-config",
+      "report-error",
+      "json-server",
+      "nock",
+      "inquirer-directory",
+      "utils/testUtils"
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "no-unused-expressions": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "internals/**",
+          "**/*.spec.js"
+        ]
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ],
+    "prettier/prettier": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/dynamic-import-chunkname": 0,
+    "react/jsx-filename-extension": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "import/no-unresolved": [
+      2,
+      {
+        "commonjs": true,
+        "caseSensitive": true
+      }
+    ],
+    "import/named": 2,
+    "import/default": 2,
+    "import/namespace": 0,
+    "import/export": 2,
+    "import/no-named-as-default": 2,
+    "import/no-named-as-default-member": 2,
+    "import/no-deprecated": 0,
+    "import/no-mutable-exports": 2,
+    "import/no-commonjs": 0,
+    "import/no-amd": 2,
+    "import/no-nodejs-modules": 0,
+    "import/first": [
+      2,
+      "absolute-first"
+    ],
+    "import/exports-last": 0,
+    "import/no-duplicates": 2,
+    "import/no-namespace": 0,
+    "import/order": [
+      0,
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "never"
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "import/no-restricted-paths": 0,
+    "import/max-dependencies": 0,
+    "import/no-absolute-path": 2,
+    "import/no-dynamic-require": 2,
+    "import/no-internal-modules": [
+      0,
+      {
+        "allow": []
+      }
+    ],
+    "import/no-self-import": 2,
+    "import/no-cycle": 2,
+    "import/no-useless-path-segments": 2,
+    "import/no-relative-parent-imports": 0,
+    "import/unambiguous": 0,
+    "import/no-webpack-loader-syntax": 2,
+    "import/no-unassigned-import": 0,
+    "import/no-named-default": 2,
+    "import/no-default-export": 0,
+    "import/no-named-export": 0,
+    "import/no-anonymous-default-export": 0,
+    "new-cap": 0,
+    "no-invalid-this": 0,
+    "semi": 0,
+    "babel/new-cap": [
+      2,
+      {
+        "capIsNew": false
+      }
+    ],
+    "babel/object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "babel/no-invalid-this": 2,
+    "babel/semi": 2
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js"
+      ],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
+}

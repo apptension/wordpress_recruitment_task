@@ -1,0 +1,30 @@
+.edit-post-visual-editor {
+  .components-button {
+    &.is-pressed {
+      background: transparent;
+    }
+
+    .block-editor-rich-text__editable {
+      color: $color-white;
+    }
+  }
+}
+
+.wp-block {
+  max-width: $block-width;
+}
+
+.block-editor-url-input__button-modal {
+  position: absolute;
+  top: 36px;
+  left: 0;
+}
+
+.block-editor-url-input__button {
+  position: relative;
+
+  .components-toolbar__control {
+    color: $color-white;
+    background: transparent;
+  }
+}

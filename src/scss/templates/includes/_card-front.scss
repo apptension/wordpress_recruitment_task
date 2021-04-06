@@ -1,0 +1,17 @@
+.wp-block-custom-card-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  background-color: darken($color-white, 5%);
+}
+
+.wp-block-custom-card {
+  width: 33.33%;
+}
+
+.card__item {
+  margin: 20px;
+  padding: 20px;
+  background-color: $color-white;
+  text-align: center;
+}

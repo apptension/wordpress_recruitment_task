@@ -1,0 +1,12 @@
+{
+  "title": {
+    "type": "string",
+    "selector": "p",
+    "default": ""
+  },
+  "desc": {
+    "type": "string",
+    "selector": "p",
+    "default": ""
+  }
+}

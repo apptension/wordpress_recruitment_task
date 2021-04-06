@@ -1,0 +1,24 @@
+@import '~sass-mq';
+@import '~@splidejs/splide/dist/css/splide.min.css';
+@import 'theme/variables';
+@import 'theme/mixins';
+@import 'theme/theme';
+@import 'theme/grid';
+@import 'theme/spacings';
+
+@import 'theme/keyframes/common';
+
+// Our modules
+@import 'templates/includes/helpers';
+@import 'templates/includes/section';
+@import 'templates/includes/header';
+@import 'templates/includes/footer';
+@import 'templates/includes/forms';
+@import 'templates/includes/components';
+@import 'templates/includes/post-meta';
+@import 'templates/includes/page-title';
+@import "templates/includes/buttons";
+
+// Our templates
+@import 'templates/home';
+

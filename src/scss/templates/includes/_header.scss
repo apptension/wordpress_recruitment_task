@@ -1,0 +1,229 @@
+.admin-bar .site-header {
+  top: 32px;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: $color-white;
+  box-shadow: 0 0 10px transparentize($color-secondary, .7);
+  z-index: $site-header-index;
+
+  @include mq($from: desktop) {
+    height: $site-header-height-desktop;
+  }
+
+  .container {
+    height: 100%;
+  }
+}
+
+.site-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @include mq($from: desktop) {
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    max-width: $layout-width;
+  }
+}
+
+.main-menu {
+  flex-basis: 100%;
+  display: none;
+  margin-top: 20px;
+
+  @include mq($from: desktop) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 80%;
+    margin-top: 0;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.main-menu__list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include mq($from: desktop) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.menu-item {
+  position: relative;
+  display: inherit;
+
+  @include mq($from: desktop) {
+    &:hover {
+      .sub-menu {
+        display: block;
+      }
+    }
+  }
+
+  a {
+    width: 100%;
+    padding: 10px 15px 10px 0;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $color-primary;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-secondary;
+    }
+
+    @include mq($from: desktop) {
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+
+    .menu-item {
+      margin-bottom: 3px;
+
+      a {
+        font-size: 18px;
+      }
+    }
+
+    @include mq($from: desktop) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 10px 0;
+      width: 180px;
+      background: $color-white;
+      box-shadow: 0 5px 5px transparentize($color-secondary, .9);
+
+      .menu-item a {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.menu-item__arrow {
+  content: '';
+  right: 10px;
+  top: 16px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: solid transparentize($color-secondary, .2);
+  border-width: 0 3px 3px 0;
+  background-color: transparent;
+  transform: rotate(45deg);
+
+  &:focus {
+    outline: none;
+  }
+
+  @include mq($from: desktop) {
+    display: none;
+  }
+}
+
+.current-menu-item {
+  a {
+    color: $color-secondary;
+  }
+}
+
+.menu-item-has-children {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    width: 90%;
+  }
+
+  &.active {
+    .sub-menu {
+      display: block;
+    }
+
+    .menu-item__arrow {
+      top: 20px;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.logo__image {
+  width: 100px;
+  height: 30px;
+
+  @include mq($from: desktop) {
+    width: 150px;
+    height: 45px;
+  }
+}
+
+.menu-toggle {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  @include mq($from: desktop) {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  &.active {
+    .menu-toggle__bar:first-of-type {
+      opacity: 0;
+    }
+
+    .menu-toggle__bar:nth-child(2) {
+      transform-origin: center;
+      transform: rotate(45deg) translate(1px, 0px);
+    }
+
+    .menu-toggle__bar:last-of-type {
+      transform-origin: left;
+      transform: rotate(-45deg) translate(1px, 4px);
+    }
+  }
+}
+
+.menu-toggle__bar {
+  width: 24px;
+  height: 2px;
+  background: $color-primary;
+  margin: 5px 4px;
+}
