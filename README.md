@@ -17,8 +17,9 @@ Below is a list of used technology in this project
 
 1. Copy `local.env.example` file and paste into root directory under the `local.env` name.
 2. Go to `src` folder and install project dependencies via `yarn` command.
-3. In root directory run Docker by `docker-compose up` command (Please ensure you are using latest Docker). Backend with CMS is available at `localhost:8080`.
-4. In `src` folder use `yarn start` command which will run project at `localhost:3000`.
+3. Create external docker volume  `docker volume create --name=wp-boilerplate-db` 
+4. In root directory run Docker by `docker-compose up` command (Please ensure you are using latest Docker). Backend with CMS is available at `localhost:8080`.
+5. In `src` folder use `yarn start` command which will run project at `localhost:3000`.
 
 #Project information
 
