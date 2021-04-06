@@ -76,8 +76,8 @@
     "webpack-merge": "^4.1.0"
   },
   "scripts": {
-    "start": "node scripts/start.js && wp-scripts start js/blocks.js --output-path=../app/themes/apptension-theme/assets/blocks",
-    "build": "node scripts/build.js && wp-scripts build js/blocks.js --output-path=../app/themes/apptension-theme/assets/blocks"
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js"
   },
   "dependencies": {
     "@wordpress/block-editor": "^5.1.5",
