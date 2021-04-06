@@ -1,3 +1,12 @@
+#Recruitment task
+
+In this repository you will find Docker image with WordPress based project. 
+Your task is to clone the project repository and set it up using instructions from Readme.md file. 
+Once you have it running please write html code that will display the list of all blog entries on a homepage. 
+The list should contain the title, publication date, tags and author information. 
+Lastly, please write logic for List javascript module that will make list elements activated (changed background, bold text) on click event.
+
+
 #Technology
 Below is a list of used technology in this project
 * [TWIG](https://twig.symfony.com/doc/3.x/) template engine for PHP
