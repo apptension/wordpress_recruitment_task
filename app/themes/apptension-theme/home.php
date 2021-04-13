@@ -71,9 +71,8 @@ $data = array(
 
 
 ?>
-<div class="site-content section--spacingTop80 section--spacingBottom80">
-YOUR CONTENT GOES HERE
-</div>
-<?php
-get_footer();
-?>
+  <div class="site-content section--spacingTop80 section--spacingBottom80">
+    YOUR CONTENT GOES HERE
+  </div>
+
+<?php get_footer(); ?>

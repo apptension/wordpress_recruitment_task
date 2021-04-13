@@ -1,21 +1,8 @@
 <?php
 
-function mytheme_enqueue_scripts() {
-
-  // Only use this method is we"re not in wp-admin
-  if ( ! is_admin() ) {
-
-    /**
-     * jQuery
-     * We want to use the modern CDN version of jQuery, not the version shipped with WordPress
-     */
-    wp_deregister_script("jquery");
-
-    /**
-     * Development & Production styles and scripts
-     * Use when in development mode (using `yarn start`)
-     * Comment out when in production mode
-     */
+function theme_enqueue_scripts() {
+  if (!is_admin() ) {
+    wp_deregister_script('jquery');
 
     if (getenv('ENVIRONMENT') == 'development') {
       $localPath = getenv('LOCAL_HOST').':'.getenv('LOCAL_PORT');
@@ -36,10 +23,12 @@ function mytheme_enqueue_scripts() {
     ));
   }
 }
-add_action("wp_enqueue_scripts", "mytheme_enqueue_scripts", 999);
 
-function inc_manifest_file() {
-  echo (getenv('ENVIRONMENT') == 'development') ? '<link rel="manifest" href='.getenv('LOCAL_HOST').':'.getenv('LOCAL_PORT').'/asset-manifest.json>'
-    : '<link rel="manifest" href='.get_template_directory_uri().'/assets/asset-manifest.json>';
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts', 999);
+
+function include_manifest_file() {
+  echo (getenv('ENVIRONMENT') == 'development') ? '<link rel="manifest" href='.getenv('LOCAL_HOST') . ':' . getenv('LOCAL_PORT') . '/asset-manifest.json>'
+    : '<link rel="manifest" href=' . get_template_directory_uri() . '/assets/asset-manifest.json>';
 }
-add_action( 'wp_head', 'inc_manifest_file' );
+
+add_action('wp_head', 'include_manifest_file');

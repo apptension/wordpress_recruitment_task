@@ -1,17 +1,6 @@
 @import '~sass-mq';
 @import 'theme/variables';
 
-@import 'templates/includes/quote-front';
-@import 'templates/includes/card-front';
-@import 'templates/includes/hero-front';
-@import 'templates/includes/cta-front';
-
-@import 'templates/includes/quote-editor';
-@import 'templates/includes/card-editor';
-@import 'templates/includes/hero-editor';
-
-@import "templates/includes/editor";
-
 .wp-block-freeform.block-library-rich-text__tinymce {
   font-family: $font-family;
   -webkit-font-smoothing: antialiased;

@@ -1,5 +1,6 @@
 <?php
-function include_all_functions($functions_path = "") {
+
+function include_all_functions($functions_path = '') {
   $functions_path = !empty($functions_path) ? $functions_path : realpath(__DIR__ . '/functions');
 
   foreach(glob($functions_path . DIRECTORY_SEPARATOR . "*") as $path) {
@@ -13,8 +14,9 @@ function include_all_functions($functions_path = "") {
 
 include_all_functions();
 
-function register_query_vars( $vars ) {
+function register_query_vars($vars) {
   $vars[] = 'page';
   return $vars;
 }
-add_filter( 'query_vars', 'register_query_vars' );
+
+add_filter('query_vars', 'register_query_vars');

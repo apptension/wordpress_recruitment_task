@@ -3,35 +3,22 @@
   "version": "1.0.0",
   "main": "index.php",
   "author": "Apptension",
-  "description": "WordPress Theme with Sass + Webpack",
+  "description": "WordPress Theme with Webpack, TypeScript & Sass",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/apptension/wordpress_recruitment_task"
   },
   "devDependencies": {
     "@apptension/eslint-config": "^1.3.0",
-    "@babel/core": "^7.8.7",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-transform-object-assign": "^7.8.3",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/preset-react": "^7.12.10",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
     "@babel/preset-typescript": "^7.8.3",
     "@types/jquery": "^3.3.33",
-    "@types/lodash.debounce": "^4.0.6",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
-    "@typescript-eslint/parser": "^2.23.0",
-    "@wordpress/scripts": "12.5.0",
-    "babel-eslint": "^10.1.0",
+    "@typescript-eslint/parser": "^4.21.0",
     "babel-loader": "^8.0.6",
-    "babel-plugin-named-asset-import": "^0.3.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react-app": "^9.1.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "browser-sync": "^2.18.12",
-    "browser-sync-webpack-plugin": "^2.2.2",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "chokidar": "^3.3.1",
     "cross-env": "^5.2.0",
@@ -61,7 +48,6 @@
     "resolve-url-loader": "^3.1.1",
     "sass-loader": "^8.0.2",
     "script-loader": "^0.7.2",
-    "strip-ansi": "^4.0.0",
     "style-loader": "^1.1.3",
     "stylelint-config-recommended": "^3.0.0",
     "terser-webpack-plugin": "^2.3.5",
@@ -72,25 +58,18 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "webpack-fix-style-only-entries": "^0.4.0",
-    "webpack-manifest-plugin": "^2.2.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-manifest-plugin": "^2.2.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js"
   },
   "dependencies": {
-    "@wordpress/block-editor": "^5.1.5",
-    "@wordpress/blocks": "^6.24.2",
-    "@wordpress/components": "^11.1.3",
-    "@wordpress/i18n": "^3.17.0",
     "jquery": "^3.4.1",
-    "lodash.debounce": "^4.0.8",
     "sass-mq": "^5.0.1"
   },
   "babel": {
     "presets": [
-      "@babel/preset-react",
       "@babel/preset-env",
       "@babel/preset-typescript"
     ]

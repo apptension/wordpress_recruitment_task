@@ -56,7 +56,6 @@ module.exports = {
   appIndexJs: resolveModule(resolveApp, 'js/app'),
   appEditorCss: resolveApp( 'scss/editor.scss'),
   appPackageJson: resolveApp('package.json'),
-  blocksAttributes: resolveApp('attributes'),
   appSrc: resolveApp(''),
   appTsConfig: resolveApp('tsconfig.json'),
   yarnLockFile: resolveApp('yarn.lock'),

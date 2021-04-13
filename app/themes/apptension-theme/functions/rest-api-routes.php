@@ -26,6 +26,7 @@ function get_search_data($param) {
 
   return $restData;
 }
+
 function register_custom_search_route() {
   register_rest_route('v1', 'search-preview', array(
     'methods' => WP_REST_Server::READABLE,
@@ -33,5 +34,5 @@ function register_custom_search_route() {
     'permission_callback' => '__return_true'
   ));
 }
-add_action('rest_api_init', 'register_custom_search_route');
 
+add_action('rest_api_init', 'register_custom_search_route');
