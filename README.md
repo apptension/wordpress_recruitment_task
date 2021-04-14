@@ -1,10 +1,11 @@
 # Recruitment task
 
 In this repository you will find Docker image with WordPress based project.
-Your task is to clone the project repository and set it up using instructions from README.md file.
-Once you have it running please write html code that will display the list of all blog entries on a homepage.
-The list should contain the title, publication date, tags and author information.
-Lastly, please write logic for List javascript module that will make list elements activated (changed background, bold text) on click event.
+
+1. First of all, you need to clone the project repository and set it up using [instructions](#setup) from README.md file.
+2. Once you have it running please write code that will display the list of all blog entries on a homepage.
+3. The list should contain the title, publication date, tags and author information.
+4. Lastly, please write logic in TypeScript that will make list elements activated (changed background, bold text) on click event.
 
 ## Setup
 
