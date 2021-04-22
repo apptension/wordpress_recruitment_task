@@ -29,14 +29,6 @@ Below is a list of used technology in this project
 
 Functions folder located under `app/themes/apptension-theme/functions`.
 
-`rest-api-routes.php`
-
-Register new route for WP REST API endpoint which is used in search preview. This is a place for defining what post type will be used or what data the endpoint will return.
-
-`nav.php`
-
-Place for registering location for menus. Currently defined Primary Navigation is a main menu in the navigation bar. In admin dashboard under `Appearance -> Menus` you can choose menu which will be show here.
-
 ### Plugins
 
 `install-entrypoint.sh` file define plugins which will be installed as a starting point in certain project. Plugins come from
